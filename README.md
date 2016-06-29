@@ -7,3 +7,6 @@ kubectl create secret docker-registry air-key \
   --docker-email=tech@whisk.co.uk
 ```
 
+```bash
+kubectl edit deployment/nginx-deployment
+```
