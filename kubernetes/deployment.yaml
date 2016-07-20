@@ -11,13 +11,13 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: quay.io/whisk/air-nginx:v0.0.1
+        image: quay.io/whisk/air-nginx:v0.0.7
         ports:
         - containerPort: 80
         livenessProbe:
           # an http probe
           httpGet:
-            path: /_status/healthz
+            path: /status/_healthz
             port: 80
           # length of time to wait for a pod to initialize
           # after pod startup, before applying health checking
